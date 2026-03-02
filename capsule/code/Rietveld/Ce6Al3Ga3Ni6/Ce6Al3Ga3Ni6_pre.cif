@@ -1,0 +1,44 @@
+# generated using pymatgen
+data_Ce2AlGaNi2
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   4.02288008
+_cell_length_b   6.93977547
+_cell_length_c   11.96268463
+_cell_angle_alpha   89.75153351
+_cell_angle_beta   90.00000000
+_cell_angle_gamma   89.99999237
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   Ce2AlGaNi2
+_chemical_formula_sum   'Ce6 Al3 Ga3 Ni6'
+_cell_volume   333.96970716
+_cell_formula_units_Z   3
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Ce  Ce0  1  0.89995843  0.96678340  0.73172569  1
+  Ce  Ce1  1  0.90059137  0.97345734  0.03891340  1
+  Ce  Ce2  1  0.90009969  0.47451252  0.55568463  1
+  Ce  Ce3  1  0.90046442  0.47124368  0.90924364  1
+  Ce  Ce4  1  0.89974546  0.97209984  0.42715642  1
+  Ce  Ce5  1  0.90065545  0.55693185  0.23177747  1
+  Al  Al6  1  0.40294224  0.79330152  0.89543653  1
+  Al  Al7  1  0.40198103  0.29190910  0.35765523  1
+  Al  Al8  1  0.40441108  0.28977036  0.10571019  1
+  Ga  Ga9  1  0.40299445  0.30692068  0.73216051  1
+  Ga  Ga10  1  0.40027136  0.78864294  0.57651365  1
+  Ga  Ga11  1  0.39923933  0.91321623  0.22463167  1
+  Ni  Ni12  1  0.39965180  0.62913144  0.73715001  1
+  Ni  Ni13  1  0.40096208  0.65428621  0.07599336  1
+  Ni  Ni14  1  0.39955038  0.15531598  0.89394248  1
+  Ni  Ni15  1  0.40085503  0.15326828  0.55874270  1
+  Ni  Ni16  1  0.89839941  0.15578340  0.23206265  1
+  Ni  Ni17  1  0.40079039  0.65584248  0.39788276  1

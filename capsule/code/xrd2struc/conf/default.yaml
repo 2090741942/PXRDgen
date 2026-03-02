@@ -1,0 +1,19 @@
+expname: xrd2struc
+
+defaults:
+  - data: default
+  - model: diffusion
+  - logging: default
+  - optim: default
+
+
+hydra:
+  run:
+    dir: ${workpath}/outputs/${now:%Y-%m-%d}/${expname}
+
+core:
+  version: 1.0
+  tags:
+    - ${now:%Y-%m-%d}
+
+workpath: /code/xrd2struc

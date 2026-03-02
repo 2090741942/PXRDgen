@@ -1,0 +1,92 @@
+import argparse
+from pathlib import Path
+import hydra
+from hydra import initialize_config_dir
+import warnings
+import torch
+import sys
+sys.path.append('.')
+from app.model.LightMain import LightMain
+warnings.filterwarnings('ignore')
+
+
+def load_model(model_path, load_data = True, label=-1):
+    with initialize_config_dir(str(model_path/'.hydra')):
+        
+        cfg = hydra.compose(config_name='config')
+        ckpt = list(sorted(model_path.glob('*.ckpt')))
+        print(str(ckpt[label]))
+        model = LightMain.load_from_checkpoint(str(ckpt[label]), **cfg.model)
+        model.eval()
+
+        if load_data:
+            # test_dataset = hydra.utils.instantiate(cfg.data.datamodule.datasets.test, _recursive_=False)
+            # testloader = DataLoader(test_dataset, shuffle=False, batch_size=256, num_workers=4)
+            datamodule = hydra.utils.instantiate(cfg.data.datamodule, _recursive_=False)
+            datamodule.setup(stage="test")
+            testloader = datamodule.test_dataloader()
+            return model, testloader
+        
+        else:
+            return model
+
+@torch.no_grad()
+def test_all_accuracy(dataloader, model):
+    print('test_all_accuracy')
+    all = []
+    for batch_demo in iter(dataloader):
+        batch_demo = batch_demo.to(model.device)
+        a = model.encoder_struc(batch_demo)
+        all.append(a)
+    all_demo = torch.cat(all)
+    
+    correct_top1, correct_top3, correct_top5, correct_top10 = 0, 0, 0, 0
+    num_all = 0
+    
+    for batch_demo in iter(dataloader):
+        batch_demo = batch_demo.to(model.device)
+        
+        top1 = model.test_topk(batch_demo, all_demo, num_all, 1)[0]
+        correct_top1 += top1
+
+        top3 = model.test_topk(batch_demo, all_demo, num_all, 3)[0]
+        correct_top3 += top3
+
+        top5 = model.test_topk(batch_demo, all_demo, num_all, 5)[0]
+        correct_top5 += top5
+
+        top10, lable, pre = model.test_topk(batch_demo, all_demo, num_all, 10)
+        correct_top10 += top10
+        # print(lable)
+        # print(pre)
+
+        num_all += len(batch_demo)
+        
+    
+    print('batch_size: ' + str(num_all))
+    print('top1 is : ' + str(round(100*correct_top1/num_all, 2)) + '%.')
+    print('top3 is : ' + str(round(100*correct_top3/num_all, 2)) + '%.')
+    print('top5 is : ' + str(round(100*correct_top5/num_all, 2)) + '%.')
+    print('top10 is : ' + str(round(100*correct_top10/num_all, 2)) + '%.')
+
+
+def main(args):
+    
+    model_path = Path(args.model_path)
+    label = args.label
+
+    diff_model, test_loader = load_model(model_path, load_data=True, label=label)
+    test_all_accuracy(test_loader, diff_model)
+    print('----')
+    
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--model_path', required=True)
+    parser.add_argument('--label', default=-1, type=int)
+    args = parser.parse_args()
+    main(args)
+
+
+
+

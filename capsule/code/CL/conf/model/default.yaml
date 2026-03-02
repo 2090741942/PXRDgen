@@ -1,0 +1,14 @@
+_target_: app.model.LightMain.LightMain
+temperature: 1.0
+  
+encoder_struc:
+  _target_: app.model.encoder_struc.struc_encoder
+
+encoder_xrd:
+  _target_: app.model.encoder_xrd.xrd_encoder_T
+  hidden_size: 128
+  num_layers: 4
+  num_heads: 4
+  dropout: 0.1
+  latent_size: 256
+

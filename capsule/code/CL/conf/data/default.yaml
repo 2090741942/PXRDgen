@@ -1,0 +1,23 @@
+file_path: /data/mp20
+
+datamodule:
+  _target_: app.data.datamodule.XRDDataModule
+
+  datasets:
+    train:
+      _target_: app.data.dataset.XRDDataset
+      save_path: ${data.file_path}/train.pt
+    
+    valid:
+      _target_: app.data.dataset.XRDDataset
+      save_path: ${data.file_path}/valid.pt
+    
+    test:
+      _target_: app.data.dataset.XRDDataset
+      save_path: ${data.file_path}/test.pt
+  
+  
+  num_workers: 4
+  batch_size: 256
+
+

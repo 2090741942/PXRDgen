@@ -1,0 +1,11 @@
+#### flow_CNN
+/code/xrd2struc/outputs/flow_CNN/last_sample1_0.pt
+sample 1: {'match_rate': 0.6841697988061022, 'rms_dist': 0.07058272578917572}
+/code/xrd2struc/outputs/flow_CNN/last_sample20_0.pt
+sample 20: {'match_rate': 0.8499889453902277, 'rms_dist': 0.04914426461129801}
+
+#### flow_CNN_L
+/code/xrd2struc/outputs/flow_CNN_L/last_sample1_0.pt
+sample 1: {'match_rate': 0.7532611098828211, 'rms_dist': 0.07268444930598028}
+/code/xrd2struc/outputs/flow_CNN_L/last_sample20_0.pt
+sample 20: {'match_rate': 0.8808313066548751, 'rms_dist': 0.0461008945883559}

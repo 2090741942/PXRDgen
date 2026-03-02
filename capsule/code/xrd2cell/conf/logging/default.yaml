@@ -1,0 +1,44 @@
+lr_monitor:
+  logging_interval: "step"
+  log_momentum: False
+
+early_stopping:
+  monitor: 'val_loss'
+  mode: 'min'
+  patience: 30
+  verbose: False
+
+model_checkpoints:
+  dirpath:  ${workpath}/outputs/${now:%Y-%m-%d}/${expname}
+  monitor: 'val_loss'
+  mode: 'min'
+  save_top_k: 1
+  verbose: False
+  save_last: False
+
+reproducibility:
+  determine: True
+  seed: 42
+
+
+wandb:
+  name: ${expname}
+  project: PXRDGen
+  entity: null
+  log_model: True
+  mode: 'offline'
+  group: xrd2cell
+
+wandb_watch:
+  log: 'all'
+  log_freq: 500
+
+pl_trainer:
+  precision: 32
+  accumulate_grad_batches: 1
+  num_sanity_val_steps: 2
+  gradient_clip_val: 0.5
+  gradient_clip_algorithm: 'value'
+  accelerator: 'gpu'
+  devices: [0]
+

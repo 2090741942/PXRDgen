@@ -1,0 +1,40 @@
+metadata_version: 1
+name: Powder Diffraction Crystal Structure Determination  Using Generative Models
+description: |-
+  (1) The pre-training XRD encoder (PXE) module: CL folder
+  (2) The crystal structure generation (CSG) modules: xrd2struc & xrd2cell folders
+  (3) The Rietveld refinement (RR) module: Rietveld folder
+authors:
+- name: Qi Li (1)
+  affiliations:
+  - name: Institute of Physics, Chinese Academy of Sciences
+- name: Rui Jiao (1)
+  affiliations:
+  - name: Dept. of Comp. Sci. & Tech., Institute for AI, Tsinghua University
+- name: Liming Wu
+  affiliations:
+  - name: Gaoling School of Artificial Intelligence, Renmin University of China
+- name: Tiannian Zhu
+  affiliations:
+  - name: The Beijing National Laboratory for Condensed Matter Physics, Institute
+      of Physics, Chinese Academy of Sciences, Beijing 100190, China
+- name: Yang Liu
+  affiliations:
+  - name: Dept. of Comp. Sci. & Tech., Institute for AI, Tsinghua University
+- name: Hongming Weng
+  affiliations:
+  - name: The Beijing National Laboratory for Condensed Matter Physics, Institute
+      of Physics, Chinese Academy of Sciences, Beijing 100190, China
+- name: Xiaolong Chen
+  affiliations:
+  - name: The Beijing National Laboratory for Condensed Matter Physics, Institute
+      of Physics, Chinese Academy of Sciences, Beijing 100190, China
+- name: Wenbing Huang (*)
+  affiliations:
+  - name: Gaoling School of Artificial Intelligence, Renmin University of China
+- name: Shifeng Jin (*)
+  affiliations:
+  - name: Institute of Physics, Chinese Academy of Sciences
+corresponding_contributor:
+  name: Shifeng Jin (*)
+  email: shifengjin@iphy.ac.cn

@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+set -ex
+
+
+export HYDRA_FULL_ERROR=1
+###### Evaluate the PXE module 
+# cd /code/CL
+# python -u scripts/test_all_accuracy.py --model_path /data/outs/CL/T_t_0_05 --label -1
+# python -u scripts/test_all_accuracy.py --model_path /data/outs/CL/T_t_1_00 --label -1
+# python -u scripts/test_all_accuracy.py --model_path /data/outs/CL/CNN_t_0_05 --label -1
+# python -u scripts/test_all_accuracy.py --model_path /data/outs/CL/CNN_t_1_00 --label -1
+# python -u scripts/plot_batch_random.py --model_path /data/outs/CL/T_t_0_05 --label -1
+# python -u scripts/plot_batch_random.py --model_path /data/outs/CL/T_t_1_00 --label -1
+# python -u scripts/plot_batch_random.py --model_path /data/outs/CL/CNN_t_0_05 --label -1
+# python -u scripts/plot_batch_random.py --model_path /data/outs/CL/CNN_t_1_00 --label -1
+# label -1 means to load the model with the last_one.ckpt.
+
+
+
+###### Evaluate xrd2struc of the CSG module
+# cd /code/xrd2struc
+# python scripts/compute.py --pt_path /data/outs/xrd2struc/flow_CNN/last_sample1_0.pt
+# # python scripts/compute.py --pt_path /data/outs/xrd2struc/flow_CNN/last_sample20_0.pt --multi_eval
+# python scripts/compute.py --pt_path /data/outs/xrd2struc/flow_CNN_L/last_sample1_0.pt
+# python scripts/compute.py --pt_path /data/outs/xrd2struc/flow_CNN_L/last_sample20_0.pt --multi_eval
+
+
+
+###### Evaluate xrd2cell of the CSG module
+# cd /code/xrd2cell
+# python scripts/compute.py --pt_path /data/outs/xrd2cell/cell_diffusion_CNN/last_sample1_L1000_fastdtw.pt
+# python scripts/compute.py --pt_path /data/outs/xrd2cell/cell_diffusion_CNN/last_sample1_L1000_upper.pt
+
+
+###### Test the RR module (Rietveld Refinement)
+###### !!! Attention
+### Not available in this environment, which requires python3.11
+### So you need to create another environment.
+# cd /code/Rietveld
+# python GSAS_rietveld.py
+
+
+
+###### Sample
+
+# #### generate structure given xrd and formula
+cd /code/xrd2struc
+python /workspace/PXRDgen/capsule-7727770/code/xrd2struc/scripts/sample_flow.py --model_path /workspace/data/outs/xrd2struc/flow_CNN --save_path /workspace/results --xrd_path /workspace/PXRDgen/capsule-7727770/code/xrd2struc/samples/Ba2Mg1Os1O6_XRD.dat  --formula Ba2Mg1Os1O6 --num_evals 20 --label -1
+
+# ### generate structure given xrd, formula and L
+cd /code/xrd2struc
+python scripts/sample_flow_givenL.py --model_path /data/outs/xrd2struc/flow_CNN_L --save_path /results --xrd_path /code/xrd2struc/samples/Ca2La2Fe2Sn2O12_XRD.dat  --formula Ca2La2Fe2Sn2O12 --num_evals 20 --label -1 --cell 5.59256268 5.72476292 7.97820616 90.00272369 89.77783966 90.00427246
+
+
+

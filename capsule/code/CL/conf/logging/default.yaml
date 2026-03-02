@@ -1,0 +1,37 @@
+lr_monitor:
+  logging_interval: 'step'
+  log_momentum: False
+
+early_stopping:
+  monitor: 'val_loss'
+  mode: 'min'
+  patience: 30
+  verbose: False
+
+model_checkpoints:
+  dirpath: ${workpath}/outputs/${now:%Y-%m-%d}/${expname}
+  monitor: 'val_loss'
+  mode: 'min'
+  save_top_k: 1
+  verbose: False
+
+reproducibility:
+  determine: True
+  seed: 42
+
+pl_trainer:
+  precision: 32
+  accelerator: 'gpu'
+  devices: [0]
+  
+wandb:
+  name: ${expname}
+  project: PXRDGen
+  entity: null
+  log_model: True
+  mode: 'offline'
+  group: CL
+
+wandb_watch:
+  log: 'all'
+  log_freq: 500

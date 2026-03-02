@@ -1,0 +1,40 @@
+### CNN-based XRD encoder align with the structures (temperature factor = 0.05)
++ python -u scripts/test_all_accuracy.py --model_path /code/CL/outputs/CNN_t_0_05 --label -1
+/code/CL/outputs/CNN_t_0_05/last_one.ckpt
+test_all_accuracy
+batch_size: 9046
+top1 is : 10.08%.
+top3 is : 19.92%.
+top5 is : 25.55%.
+top10 is : 33.57%.
+
+### CNN-based XRD encoder align with the structures (temperature factor = 1.00)
++ python -u scripts/test_all_accuracy.py --model_path /code/CL/outputs/CNN_t_1_00 --label -1
+/code/CL/outputs/CNN_t_1_00/last_one.ckpt
+test_all_accuracy
+batch_size: 9046
+top1 is : 1.56%.
+top3 is : 3.94%.
+top5 is : 6.12%.
+top10 is : 10.44%.
+
+### Transformer-based XRD encoder align with the structures (temperature factor = 0.05)
++ python -u scripts/test_all_accuracy.py --model_path /code/CL/outputs/T_t_0_05 --label -1
+/code/CL/outputs/T_t_0_05/last_one.ckpt
+test_all_accuracy
+batch_size: 9046
+top1 is : 46.99%.
+top3 is : 75.53%.
+top5 is : 84.58%.
+top10 is : 92.42%.
+
+### Transformer-based XRD encoder align with the structures (temperature factor = 1.00)
++ python -u scripts/test_all_accuracy.py --model_path /code/CL/outputs/T_t_1_00 --label -1
+/code/CL/outputs/T_t_1_00/last_one.ckpt
+test_all_accuracy
+batch_size: 9046
+top1 is : 1.72%.
+top3 is : 4.5%.
+top5 is : 6.59%.
+top10 is : 11.53%.
+
