@@ -1,0 +1,7 @@
+/workspace/mp-20/outs/xrd2struc/flow_CNN/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.6841697988061022, 'rms_dist': 0.0705827257891757}
+
+/workspace/mp-20/outs/xrd2struc/flow_CNN_L/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.7532611098828211, 'rms_dist': 0.07268339907239083}
