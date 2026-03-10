@@ -2,8 +2,11 @@ import argparse
 import torch
 from tqdm import tqdm
 import sys
-sys.path.insert(0, '/g2full/GSAS-II/GSASII')
-import GSASIIlattice as G2lat
+import os
+# sys.path.insert(0, '/root/g2full/GSAS-II/GSASII')
+# import GSASIIlattice as G2lat
+sys.path.insert(0, os.path.expanduser("~/g2full/GSAS-II"))
+from GSASII import GSASIIlattice as G2lat
 
 
 def main(args):
