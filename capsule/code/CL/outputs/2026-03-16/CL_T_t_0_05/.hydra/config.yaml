@@ -1,0 +1,82 @@
+data:
+  file_path: /workspace/mp-20/mp20
+  datamodule:
+    _target_: app.data.datamodule.XRDDataModule
+    datasets:
+      train:
+        _target_: app.data.dataset.XRDDataset
+        save_path: ${data.file_path}/train.pt
+      valid:
+        _target_: app.data.dataset.XRDDataset
+        save_path: ${data.file_path}/valid.pt
+      test:
+        _target_: app.data.dataset.XRDDataset
+        save_path: ${data.file_path}/test.pt
+    num_workers: 4
+    batch_size: 256
+model:
+  _target_: app.model.LightMain.LightMain
+  temperature: 0.05
+  encoder_struc:
+    _target_: app.model.encoder_struc.struc_encoder
+  encoder_xrd:
+    _target_: app.model.encoder_xrd.xrd_encoder_T
+    hidden_size: 128
+    num_layers: 4
+    num_heads: 4
+    dropout: 0.1
+    latent_size: 256
+logging:
+  lr_monitor:
+    logging_interval: step
+    log_momentum: false
+  early_stopping:
+    monitor: val_loss
+    mode: min
+    patience: 30
+    verbose: false
+  model_checkpoints:
+    dirpath: ${workpath}/outputs/${now:%Y-%m-%d}/${expname}
+    monitor: val_loss
+    mode: min
+    save_top_k: 1
+    verbose: false
+  reproducibility:
+    determine: true
+    seed: 42
+  pl_trainer:
+    precision: bf16-mixed
+    accelerator: gpu
+    devices:
+    - 0
+  wandb:
+    name: ${expname}
+    project: PXRDGen
+    entity: null
+    log_model: true
+    mode: offline
+    group: CL
+  wandb_watch:
+    log: all
+    log_freq: 500
+optim:
+  optimizer:
+    _target_: torch.optim.Adam
+    lr: 0.0001
+    betas:
+    - 0.9
+    - 0.999
+    eps: 1.0e-08
+    weight_decay: 0
+  use_lr_scheduler: true
+  lr_scheduler:
+    _target_: torch.optim.lr_scheduler.CosineAnnealingLR
+    T_max: ${optim.max_epochs}
+    eta_min: 1.0e-08
+  max_epochs: 400
+expname: CL_T_t_0_05
+core:
+  version: 1.0
+  tags:
+  - ${now:%Y-%m-%d}
+workpath: /workspace/PXRDgen/capsule/code/CL

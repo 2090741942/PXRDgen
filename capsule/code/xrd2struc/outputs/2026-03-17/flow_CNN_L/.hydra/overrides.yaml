@@ -1,0 +1,6 @@
+- expname=flow_CNN_L
+- model=flow
+- model.encoder_xrd_fix=false
+- model.encoder_xrd_ckpt=CL_CNN_0_05_train.ckpt
+- model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN
+- model.cost_lattice=0

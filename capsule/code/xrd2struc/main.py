@@ -13,7 +13,7 @@ from pxrdgen.data.utils import build_callbacks, Wandb_logger
 warnings.filterwarnings('ignore')
 MProcess.set_sharing_strategy('file_system')
 
-PROJECT_ROOT = Path('/code/xrd2struc')
+PROJECT_ROOT = Path('/workspace/PXRDgen/capsule/code/xrd2struc')
 
 @hydra.main(config_path=str(PROJECT_ROOT/'conf'), config_name="default")
 def main(cfg: DictConfig):

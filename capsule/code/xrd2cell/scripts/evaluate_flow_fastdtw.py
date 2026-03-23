@@ -8,7 +8,7 @@ import numpy as np
 import sys
 sys.path.append('.')
 from pxrdgen.model.flow_shift_align import LFlow
-sys.path.insert(0, '/g2full/GSAS-II/GSASII')
+sys.path.insert(0, '/workspace/g2full/GSAS-II/GSASII')
 import GSASIIlattice as G2lat
 from fastdtw import fastdtw
 from tqdm import tqdm

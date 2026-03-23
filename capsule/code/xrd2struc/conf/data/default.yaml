@@ -1,4 +1,4 @@
-file_path: /data/mp20
+file_path: /workspace/mp-20/mp20
 datamodule:
   _target_: pxrdgen.data.datamodule.XRDDataModule
   datasets:

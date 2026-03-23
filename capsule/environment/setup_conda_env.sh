@@ -4,7 +4,7 @@ set -euo pipefail
 # Usage:
 #   bash setup_conda_env.sh [env_name]
 
-ENV_NAME="${1:-capsule-py39-cu118}"
+ENV_NAME="${1:-PXRDGen}"
 PYTHON_VERSION="3.9"
 
 # =========================
@@ -120,7 +120,7 @@ fi
 
 echo "Using installer: ${GSAS2_URL}"
 
-mkdir -p "${GSAS2_INSTALL_DIR}"
+# mkdir -p "${GSAS2_INSTALL_DIR}"
 mkdir -p "${GSASII_CONFIGDIR}"
 
 bash "${TMP_G2_SCRIPT}" -b -p "${GSAS2_INSTALL_DIR}"

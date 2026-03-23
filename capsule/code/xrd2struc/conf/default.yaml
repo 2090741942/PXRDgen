@@ -16,4 +16,4 @@ core:
   tags:
     - ${now:%Y-%m-%d}
 
-workpath: /code/xrd2struc
+workpath: /workspace/PXRDgen/capsule/code/xrd2struc

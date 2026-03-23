@@ -66,7 +66,14 @@ def flow(loader, model, given_lattices, num_evals, step_lr = 5, infer_timesteps=
         for eval_idx in range(num_evals):
 
             print(f'batch {idx} / {len(loader)}, sample {eval_idx} / {num_evals}')
-            initial_cell = given_lattices[eval_idx, idx*len(batch):(idx+1)*len(batch)]
+            # initial_cell = given_lattices[eval_idx, idx*len(batch):(idx+1)*len(batch)]
+            if given_lattices.dim() == 3:
+                initial_cell = given_lattices[eval_idx, idx*len(batch):(idx+1)*len(batch)]
+            elif given_lattices.dim() == 2:
+                initial_cell = given_lattices[idx*len(batch):(idx+1)*len(batch)]
+            else:
+                raise ValueError(f"Unexpected given_lattices shape: {given_lattices.shape}")
+
             initial_cell = initial_cell.to(model.device)
             outputs = model.sample_given_inital_cell(batch, initial_cell, step_lr=step_lr, infer_timesteps=infer_timesteps)
             batch_frac_coords.append(outputs['frac_coords'].detach().cpu())

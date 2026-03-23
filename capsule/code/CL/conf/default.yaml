@@ -15,4 +15,4 @@ core:
   tags:
     - ${now:%Y-%m-%d}
 
-workpath: /code/CL
+workpath: /workspace/PXRDgen/capsule/code/CL

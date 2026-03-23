@@ -1,0 +1,32 @@
+# encoder不训练，不提供L
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-17/flow_CNN/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.6948927702852089, 'rms_dist': 0.06573980282164582}
+
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-17/flow_CNN/last_sample20_0.pt
+sample 20: encoder
+{'match_rate': 0.8475569312403273, 'rms_dist': 0.047833484346277606}
+
+# encoder用CNN temp=0.05，不提供L
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-17/flow_CNN_0.05/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.6905814724740217, 'rms_dist': 0.0732708710635827}
+
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-17/flow_CNN_0.05/last_sample20_0.pt
+sample 20: 
+{'match_rate': 0.8504311297811187, 'rms_dist': 0.049219579604879944}
+
+
+# encoder用CNN temp=0.05，使用真实L
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-17/flow_CNN_L/last_sample1_refine0_0_upper.pt
+sample 1: 
+{'match_rate': 0.7501658191465841, 'rms_dist': 0.07589832743022489}
+
+# encoder用CNN temp=0.05，使用upper的L，即和真实值对比后挑选
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-17/flow_CNN_L/last_sample1_refine1_0_upper.pt
+sample 1: 
+{'match_rate': 0.7432014149900509, 'rms_dist': 0.07567516231206121}
+
+
+
+

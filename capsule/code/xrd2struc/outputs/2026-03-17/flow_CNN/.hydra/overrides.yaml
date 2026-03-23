@@ -1,0 +1,4 @@
+- expname=flow_CNN
+- model=flow
+- model.encoder_xrd_fix=None
+- model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN

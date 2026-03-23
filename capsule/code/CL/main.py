@@ -14,7 +14,7 @@ warnings.filterwarnings('ignore')
 torch.multiprocessing.set_sharing_strategy('file_system')
 
 
-PROJECT_ROOT = Path('/code/CL')
+PROJECT_ROOT = Path('/workspace/PXRDgen/capsule/code/CL')
 
 @hydra.main(config_path=str(PROJECT_ROOT/'conf'), config_name="default")
 def main(cfg: DictConfig):

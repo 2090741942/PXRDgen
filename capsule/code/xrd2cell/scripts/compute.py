@@ -5,7 +5,7 @@ import sys
 import os
 # sys.path.insert(0, '/root/g2full/GSAS-II/GSASII')
 # import GSASIIlattice as G2lat
-sys.path.insert(0, os.path.expanduser("~/g2full/GSAS-II"))
+sys.path.insert(0, "/workspace/g2full/GSAS-II")
 from GSASII import GSASIIlattice as G2lat
 
 
