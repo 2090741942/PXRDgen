@@ -34,3 +34,11 @@ top5 is : 23.61%.
 top10 is : 35.47%.
 ----
 
+/workspace/PXRDgen/capsule/code/CL/outputs/2026-03-23/CL_CNN_t_1_00/last_one.ckpt
+test_all_accuracy
+batch_size: 9046
+top1 is : 2.95%.
+top3 is : 6.67%.
+top5 is : 9.14%.
+top10 is : 14.14%.
+----

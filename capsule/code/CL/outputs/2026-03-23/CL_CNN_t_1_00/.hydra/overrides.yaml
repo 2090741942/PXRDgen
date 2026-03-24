@@ -1,0 +1,6 @@
+- expname=CL_CNN_t_1_00
+- model.temperature=1.0
+- model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_CNN
+- optim.optimizer.weight_decay=0
+- optim.optimizer.lr=1e-3
+- optim.lr_scheduler.eta_min=1e-7

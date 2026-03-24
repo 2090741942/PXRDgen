@@ -1,0 +1,12 @@
+/workspace/PXRDgen/capsule/code/xrd2cell/outputs/2026-03-16/cell_diffusion_CNN_0_05/last_sample1_L1000_upper.pt   
+the MAPE of generated cell                                                                                                                                                          
+tensor([1.8072, 1.4421, 1.2854, 0.3617, 0.3419, 0.3500, 3.5263])                                                                                                                    
+the RMSE of generated cell                                                                                                                                                          
+tensor([ 0.2649,  0.2633,  0.4620,  1.9444,  1.8526,  1.9972, 25.1410])  
+
+
+/workspace/PXRDgen/capsule/code/xrd2cell/outputs/2026-03-16/cell_diffusion_CNN_0_05/last_sample1_L1000_fastdtw_origin.pt
+the MAPE of generated cell
+tensor([1.7086, 1.2590, 0.8744, 4.3713, 2.6458, 3.2542, 2.4979])
+the RMSE of generated cell
+tensor([ 0.3684,  0.3111,  0.3650, 12.1070,  8.0565, 10.2750, 32.3288])

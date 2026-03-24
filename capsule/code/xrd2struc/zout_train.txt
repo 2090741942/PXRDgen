@@ -22,10 +22,25 @@ sample 20:
 sample 1: 
 {'match_rate': 0.7501658191465841, 'rms_dist': 0.07589832743022489}
 
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-17/flow_CNN_L/last_sample20_refine0_0_upper.pt
+sample 20: 
+{'match_rate': 0.8734247181074508, 'rms_dist': 0.0476193343788922}
+
 # encoder用CNN temp=0.05，使用upper的L，即和真实值对比后挑选
 /workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-17/flow_CNN_L/last_sample1_refine1_0_upper.pt
 sample 1: 
 {'match_rate': 0.7432014149900509, 'rms_dist': 0.07567516231206121}
+
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-17/flow_CNN_L/last_sample20_refine1_0_upper.pt
+sample 20: 
+{'match_rate': 0.8698872429803228, 'rms_dist': 0.0474368347959061}
+
+# encoder用CNN temp=0.05，使用fastdtw的L
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-17/flow_CNN_L/last_sample1_refine1_0_fastdtw.pt
+sample 1: 
+{'match_rate': 0.7224187486181738, 'rms_dist': 0.07143454108117282}
+
+
 
 
 
