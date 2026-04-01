@@ -1,0 +1,114 @@
+data:
+  file_path: /workspace/mp-20/mp20
+  datamodule:
+    _target_: pxrdgen.data.datamodule.XRDDataModule
+    datasets:
+      train:
+        _target_: pxrdgen.data.dataset.XRDDataset
+        save_path: ${data.file_path}/train.pt
+      valid:
+        _target_: pxrdgen.data.dataset.XRDDataset
+        save_path: ${data.file_path}/valid.pt
+      test:
+        _target_: pxrdgen.data.dataset.XRDDataset
+        save_path: ${data.file_path}/test.pt
+    num_workers: 4
+    batch_size: 256
+model:
+  _target_: pxrdgen.model.diffusion.CSPDiffusion
+  time_dim: 256
+  latent_dim: 256
+  cost_coord: 1.0
+  cost_lattice: 1.0
+  timesteps: 1000
+  encoder_xrd_fix: true
+  ckpt_path: ${workpath}/pre_ckpt/
+  encoder_xrd_ckpt: CL_T_0_05_train.ckpt
+  encoder_xrd:
+    _target_: pxrdgen.model.encoder_xrd.xrd_encoder_T
+    hidden_size: 128
+    num_layers: 4
+    num_heads: 4
+    dropout: 0.1
+    latent_size: ${model.latent_dim}
+  decoder:
+    _target_: pxrdgen.model.cspnet.CSPNet
+    hidden_dim: 512
+    latent_dim: ${model.latent_dim}
+    max_atoms: 100
+    num_layers: 6
+    act_fn: silu
+    dis_emb: sin
+    num_freqs: 128
+    ln: true
+    ip: true
+  beta_scheduler:
+    _target_: pxrdgen.model.diff_utils.BetaScheduler
+    timesteps: ${model.timesteps}
+    scheduler_mode: cosine
+  sigma_scheduler:
+    _target_: pxrdgen.model.diff_utils.SigmaScheduler
+    timesteps: ${model.timesteps}
+    sigma_begin: 0.005
+    sigma_end: 0.5
+logging:
+  lr_monitor:
+    logging_interval: step
+    log_momentum: false
+  early_stopping:
+    monitor: val_loss
+    mode: min
+    patience: 30
+    verbose: false
+  model_checkpoints:
+    dirpath: ${workpath}/outputs/${now:%Y-%m-%d}/${expname}
+    monitor: val_loss
+    mode: min
+    save_top_k: 1
+    verbose: false
+    save_last: false
+  reproducibility:
+    determine: true
+    seed: 42
+  wandb:
+    name: ${expname}
+    project: PXRDGen
+    entity: null
+    log_model: true
+    mode: offline
+    group: xrd2sturc
+  wandb_watch:
+    log: all
+    log_freq: 500
+  pl_trainer:
+    precision: 32
+    accumulate_grad_batches: 1
+    num_sanity_val_steps: 2
+    gradient_clip_val: 0.5
+    gradient_clip_algorithm: value
+    profiler: simple
+    accelerator: gpu
+    devices:
+    - 0
+optim:
+  optimizer:
+    _target_: torch.optim.Adam
+    lr: 0.001
+    betas:
+    - 0.9
+    - 0.999
+    eps: 1.0e-08
+    weight_decay: 0
+  use_lr_scheduler: true
+  lr_scheduler:
+    _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+    factor: 0.6
+    patience: 30
+    min_lr: 0.0001
+  max_epochs: 1000
+expname: Diff_T_0.05_fixed
+core:
+  version: 1.0
+  tags:
+  - ${now:%Y-%m-%d}
+workpath: /workspace/PXRDgen/capsule/code/xrd2struc

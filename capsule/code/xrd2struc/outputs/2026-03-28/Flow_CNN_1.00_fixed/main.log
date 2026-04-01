@@ -1,0 +1,3 @@
+[2026-03-28 15:20:20,687][hydra.utils][INFO] - Start training!
+[2026-03-28 20:39:22,624][hydra.utils][INFO] - Start testing!
+[2026-03-28 20:39:30,873][hydra.utils][INFO] - Using time 5.319876882897483 h

@@ -1,0 +1,5 @@
+- expname=Flow_CNN_1.00_unfixed
+- model=flow
+- model.encoder_xrd_fix=false
+- model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN
+- model.encoder_xrd_ckpt=CL_CNN_1_00_train.ckpt

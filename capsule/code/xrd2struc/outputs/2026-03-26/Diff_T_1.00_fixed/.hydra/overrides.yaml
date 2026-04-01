@@ -1,0 +1,5 @@
+- expname=Diff_T_1.00_fixed
+- model=diffusion
+- model.encoder_xrd_fix=true
+- model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T
+- model.encoder_xrd_ckpt=CL_T_1_00_train.ckpt

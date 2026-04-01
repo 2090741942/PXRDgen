@@ -23,69 +23,70 @@ cd $work_path
 # daytime='2026-3-16'
 # python main.py expname=$name model=flow model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_0_05_train.ckpt
 
-daytime='2026-3-25'
+# daytime='2026-3-25'
 
 # diffusion
-name='Diff_CNN_0.05_unfixed'
-python main.py expname=$name model=diffusion model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_0_05_train.ckpt &
+# name='Diff_CNN_0.05_unfixed'
+# python main.py expname=$name model=diffusion model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_0_05_train.ckpt &
 
-name='Diff_CNN_0.05_fixed'
-python main.py expname=$name model=diffusion model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_0_05_train.ckpt &
+# name='Diff_CNN_0.05_fixed'
+# python main.py expname=$name model=diffusion model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_0_05_train.ckpt &
 
-wait
+# wait
 
-name='Diff_CNN_1.00_unfixed'
-python main.py expname=$name model=diffusion model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_1_00_train.ckpt &
+# name='Diff_CNN_1.00_unfixed'
+# python main.py expname=$name model=diffusion model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_1_00_train.ckpt &
 
-name='Diff_CNN_1.00_fixed'
-python main.py expname=$name model=diffusion model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_1_00_train.ckpt &
+# name='Diff_CNN_1.00_fixed'
+# python main.py expname=$name model=diffusion model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_1_00_train.ckpt &
 
-wait
+# wait
 
 name='Diff_T_0.05_unfixed'
-python main.py expname=$name model=diffusion model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_0_05_train.ckpt &
+python main.py expname=$name model=diffusion model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_0_05_train.ckpt 
 
-name='Diff_T_0.05_fixed'
-python main.py expname=$name model=diffusion model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_0_05_train.ckpt &
+# name='Diff_T_0.05_fixed'
+# python main.py expname=$name model=diffusion model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_0_05_train.ckpt &
 
-wait
+# wait
 
 name='Diff_T_1.00_unfixed'
-python main.py expname=$name model=diffusion model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_1_00_train.ckpt & 
+python main.py expname=$name model=diffusion model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_1_00_train.ckpt  
 
-name='Diff_T_1.00_fixed'
-python main.py expname=$name model=diffusion model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_1_00_train.ckpt &
+# name='Diff_T_1.00_fixed'
+# python main.py expname=$name model=diffusion model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_1_00_train.ckpt &
 
-wait
+# wait
 
 
 # FLOW
-name='Flow_CNN_0.05_fixed'
-python main.py expname=$name model=flow model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_0_05_train.ckpt &
+# name='Flow_CNN_0.05_fixed'
+# python main.py expname=$name model=flow model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_0_05_train.ckpt &
 
-name='Flow_CNN_1.00_unfixed'
-python main.py expname=$name model=flow model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_1_00_train.ckpt &
+# name='Flow_CNN_1.00_unfixed'
+# python main.py expname=$name model=flow model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_1_00_train.ckpt &
 
-wait
+# wait
 
 name='Flow_CNN_1.00_fixed'
-python main.py expname=$name model=flow model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_1_00_train.ckpt &
+python main.py expname=$name model=flow model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN model.encoder_xrd_ckpt=CL_CNN_1_00_train.ckpt 
+
 
 name='Flow_T_0.05_unfixed'
-python main.py expname=$name model=flow model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_0_05_train.ckpt &
+python main.py expname=$name model=flow model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_0_05_train.ckpt 
 
 wait
 
 name='Flow_T_0.05_fixed'
-python main.py expname=$name model=flow model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_0_05_train.ckpt &
+python main.py expname=$name model=flow model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_0_05_train.ckpt 
 
 name='Flow_T_1.00_unfixed'
-python main.py expname=$name model=flow model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_1_00_train.ckpt &
+python main.py expname=$name model=flow model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_1_00_train.ckpt 
 
-wait
+# wait
 
-name='Flow_T_1.00_fixed'
-python main.py expname=$name model=flow model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_1_00_train.ckpt &
+# name='Flow_T_1.00_fixed'
+# python main.py expname=$name model=flow model.encoder_xrd_fix=true model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_1_00_train.ckpt &
 
 
 # 1.2 xrd_encoder without pretraining
@@ -94,19 +95,27 @@ python main.py expname=$name model=flow model.encoder_xrd_fix=true model.encoder
 # daytime='2026-3-16'
 # python main.py expname=$name model=flow model.encoder_xrd_fix=None model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN
 
-name='Diff_CNN_w/o_CL'
-python main.py expname=$name model=diffusion model.encoder_xrd_fix=None model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN &
+# name='Diff_CNN_w_o_CL'
+# python main.py expname=$name model=diffusion model.encoder_xrd_fix=None model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN &
 
-wait
+# wait
 
-name='Diff_T_w/o_CL'
-python main.py expname=$name model=diffusion model.encoder_xrd_fix=None model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN &
+name='Diff_T_w_o_CL'
+python main.py expname=$name model=diffusion model.encoder_xrd_fix=None model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T 
 
 # name='Flow_CNN_w/o_CL'
 # python main.py expname=$name model=flow model.encoder_xrd_fix=None model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_CNN
 
-name='Flow_T_w/o_CL'
-python main.py expname=$name model=flow model.encoder_xrd_fix=None model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T &
+name='Flow_T_w_o_CL'
+python main.py expname=$name model=flow model.encoder_xrd_fix=None model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T 
+
+# wait
+
+# name='Diff_T_1.00_unfixed'
+# python main.py expname=$name model=diffusion model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_1_00_train.ckpt & 
+
+# name='Diff_T_0.05_unfixed'
+# python main.py expname=$name model=diffusion model.encoder_xrd_fix=false model.encoder_xrd._target_=pxrdgen.model.encoder_xrd.xrd_encoder_T model.encoder_xrd_ckpt=CL_T_0_05_train.ckpt &
 
 
 ###############

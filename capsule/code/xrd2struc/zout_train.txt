@@ -44,4 +44,13 @@ sample 1:
 
 
 
+# encoder用CNN temp=1.00 unfixed, 无L
+# last
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-25/Diff_CNN_1.00_unfixed/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.64791067875304, 'rms_dist': 0.06020530785193571}
 
+# best
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-25/Diff_CNN_1.00_unfixed/best_sample1_1.pt
+sample 1: 
+{'match_rate': 0.6107671899181959, 'rms_dist': 0.06691341407793025}
