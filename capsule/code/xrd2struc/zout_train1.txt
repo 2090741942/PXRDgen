@@ -1,0 +1,343 @@
+Diffusion
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-24/Diff_CNN_0.05_fixed/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.5531726730046429, 'rms_dist': 0.06689098915344743}
+
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-24/Diff_CNN_0.05_unfixed/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.6569754587663056, 'rms_dist': 0.0621943339958052}
+
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-25/Diff_CNN_1.00_fixed/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.5452133539686049, 'rms_dist': 0.06117877008736915}
+
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-25/Diff_T_0.05_fixed/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.6108777360159187, 'rms_dist': 0.057351520475788814}
+
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-26/Diff_CNN_w_o_CL/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.5215564890559363, 'rms_dist': 0.06113531361954729}
+
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-26/Diff_T_1.00_fixed/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.5376962193234579, 'rms_dist': 0.05667446338943968}
+
+
+
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-24/Diff_CNN_0.05_fixed/last_sample20_0.pt
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Processing batch 3
+Processing batch 4
+Processing batch 5
+Processing batch 6
+Processing batch 7
+Processing batch 8
+Processing batch 9
+Processing batch 10
+Processing batch 11
+Processing batch 12
+Processing batch 13
+Processing batch 14
+Processing batch 15
+Processing batch 16
+Processing batch 17
+Processing batch 18
+Processing batch 19
+sample 20: 
+{'match_rate': 0.7845456555383595, 'rms_dist': 0.05174630022987794}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-24/Diff_CNN_0.05_fixed/last_sample20_0.pt
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Processing batch 3
+Processing batch 4
+Processing batch 5
+Processing batch 6
+Processing batch 7
+Processing batch 8
+Processing batch 9
+Processing batch 10
+Processing batch 11
+Processing batch 12
+Processing batch 13
+Processing batch 14
+Processing batch 15
+Processing batch 16
+Processing batch 17
+Processing batch 18
+Processing batch 19
+sample 20: 
+{'match_rate': 0.7845456555383595, 'rms_dist': 0.05174630022987794}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-24/Diff_CNN_0.05_unfixed/last_sample20_0.pt
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Processing batch 3
+Processing batch 4
+Processing batch 5
+Processing batch 6
+Processing batch 7
+Processing batch 8
+Processing batch 9
+Processing batch 10
+Processing batch 11
+Processing batch 12
+Processing batch 13
+Processing batch 14
+Processing batch 15
+Processing batch 16
+Processing batch 17
+Processing batch 18
+Processing batch 19
+sample 20: 
+{'match_rate': 0.8410347114746849, 'rms_dist': 0.040691347597906775}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-25/Diff_CNN_1.00_fixed/last_sample20_0.pt
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Processing batch 3
+Processing batch 4
+Processing batch 5
+Processing batch 6
+Processing batch 7
+Processing batch 8
+Processing batch 9
+Processing batch 10
+Processing batch 11
+Processing batch 12
+Processing batch 13
+Processing batch 14
+Processing batch 15
+Processing batch 16
+Processing batch 17
+Processing batch 18
+Processing batch 19
+sample 20: 
+{'match_rate': 0.7864249391996463, 'rms_dist': 0.04804342902101453}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-25/Diff_CNN_1.00_unfixed/last_sample20_0.pt
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Processing batch 3
+Processing batch 4
+Processing batch 5
+Processing batch 6
+Processing batch 7
+Processing batch 8
+Processing batch 9
+Processing batch 10
+Processing batch 11
+Processing batch 12
+Processing batch 13
+Processing batch 14
+Processing batch 15
+Processing batch 16
+Processing batch 17
+Processing batch 18
+Processing batch 19
+sample 20: 
+{'match_rate': 0.8392659739111209, 'rms_dist': 0.042376418325477914}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-25/Diff_T_0.05_fixed/last_sample20_0.pt
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Processing batch 3
+Processing batch 4
+Processing batch 5
+Processing batch 6
+Processing batch 7
+Processing batch 8
+Processing batch 9
+Processing batch 10
+Processing batch 11
+Processing batch 12
+Processing batch 13
+Processing batch 14
+Processing batch 15
+Processing batch 16
+Processing batch 17
+Processing batch 18
+Processing batch 19
+sample 20: 
+{'match_rate': 0.8211364138845899, 'rms_dist': 0.04366399448998592}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-26/Diff_CNN_w_o_CL/last_sample20_0.pt
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Processing batch 3
+Processing batch 4
+Processing batch 5
+Processing batch 6
+Processing batch 7
+Processing batch 8
+Processing batch 9
+Processing batch 10
+Processing batch 11
+Processing batch 12
+Processing batch 13
+Processing batch 14
+Processing batch 15
+Processing batch 16
+Processing batch 17
+Processing batch 18
+Processing batch 19
+sample 20: 
+{'match_rate': 0.7835507406588548, 'rms_dist': 0.047980009597643904}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-26/Diff_T_1.00_fixed/last_sample20_0.pt
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Processing batch 3
+Processing batch 4
+Processing batch 5
+Processing batch 6
+Processing batch 7
+Processing batch 8
+Processing batch 9
+Processing batch 10
+Processing batch 11
+Processing batch 12
+Processing batch 13
+Processing batch 14
+Processing batch 15
+Processing batch 16
+Processing batch 17
+Processing batch 18
+Processing batch 19
+sample 20: 
+{'match_rate': 0.7868671235905372, 'rms_dist': 0.045974659897452634}
+
+Flow
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-26/Flow_CNN_0.05_fixed/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.6004864028299801, 'rms_dist': 0.07491523957998344}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-26/Flow_CNN_0.05_fixed/last_sample20_0.pt
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Processing batch 3
+Processing batch 4
+Processing batch 5
+Processing batch 6
+Processing batch 7
+Processing batch 8
+Processing batch 9
+Processing batch 10
+Processing batch 11
+Processing batch 12
+Processing batch 13
+Processing batch 14
+Processing batch 15
+Processing batch 16
+Processing batch 17
+Processing batch 18
+Processing batch 19
+sample 20: 
+{'match_rate': 0.8088657970373646, 'rms_dist': 0.0587720596102003}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-26/Flow_CNN_1.00_unfixed/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.6916869334512492, 'rms_dist': 0.07241360660037106}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-26/Flow_CNN_1.00_unfixed/last_sample20_0.pt
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Processing batch 3
+Processing batch 4
+Processing batch 5
+Processing batch 6
+Processing batch 7
+Processing batch 8
+Processing batch 9
+Processing batch 10
+Processing batch 11
+Processing batch 12
+Processing batch 13
+Processing batch 14
+Processing batch 15
+Processing batch 16
+Processing batch 17
+Processing batch 18
+Processing batch 19
+sample 20: 
+{'match_rate': 0.8523104134424054, 'rms_dist': 0.04909668468244804}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-26/Flow_T_1.00_fixed/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.6185054167587885, 'rms_dist': 0.06595002558643098}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-26/Flow_T_1.00_fixed/last_sample20_0.pt
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Processing batch 3
+Processing batch 4
+Processing batch 5
+Processing batch 6
+Processing batch 7
+Processing batch 8
+Processing batch 9
+Processing batch 10
+Processing batch 11
+Processing batch 12
+Processing batch 13
+Processing batch 14
+Processing batch 15
+Processing batch 16
+Processing batch 17
+Processing batch 18
+Processing batch 19
+sample 20: 
+{'match_rate': 0.8089763431350874, 'rms_dist': 0.05201403749676998}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-28/Flow_CNN_1.00_fixed/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.6091089984523547, 'rms_dist': 0.07090500365117726}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-28/Flow_CNN_1.00_fixed/last_sample20_0.pt
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Processing batch 3
+Processing batch 4
+Processing batch 5
+Processing batch 6
+Processing batch 7
+Processing batch 8
+Processing batch 9
+Processing batch 10
+Processing batch 11
+Processing batch 12
+Processing batch 13
+Processing batch 14
+Processing batch 15
+Processing batch 16
+Processing batch 17
+Processing batch 18
+Processing batch 19
+sample 20: 
+{'match_rate': 0.8116294494804334, 'rms_dist': 0.05501037998551919}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-28/Flow_T_0.05_fixed/last_sample1_0.pt
+sample 1: 
+{'match_rate': 0.6768737563564006, 'rms_dist': 0.06934331390052982}
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-28/Flow_T_0.05_fixed/last_sample20_0.pt
+Processing batch 0
+Processing batch 1
+Processing batch 2
+Processing batch 3
+Processing batch 4
+Processing batch 5
+Processing batch 6
+Processing batch 7
+Processing batch 8
+Processing batch 9
+Processing batch 10
+Processing batch 11
+Processing batch 12
+Processing batch 13
+Processing batch 14
+Processing batch 15
+Processing batch 16
+Processing batch 17
+Processing batch 18
+Processing batch 19
+sample 20: 
+{'match_rate': 0.8387132434225072, 'rms_dist': 0.048176926753357566}
