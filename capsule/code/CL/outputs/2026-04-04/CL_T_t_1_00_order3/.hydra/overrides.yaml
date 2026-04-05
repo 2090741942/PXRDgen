@@ -1,0 +1,6 @@
+- expname=CL_T_t_1_00_order3
+- model.temperature=1.0
+- model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_T
+- optim.optimizer.weight_decay=0
+- optim.lr_scheduler.eta_min=1e-8
+- logging.pl_trainer.precision=bf16-mixed

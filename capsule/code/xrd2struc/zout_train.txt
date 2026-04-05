@@ -50,6 +50,14 @@ sample 1:
 sample 1: 
 {'match_rate': 0.64791067875304, 'rms_dist': 0.06020530785193571}
 
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-25/Diff_CNN_1.00_unfixed/last_sample1_1.pt
+sample 1: 
+{'match_rate': 0.6441521114304665, 'rms_dist': 0.05856153368113941}
+
+/workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-25/Diff_CNN_1.00_unfixed/last_sample1_2.pt
+sample 1: 
+{'match_rate': 0.643931019235021, 'rms_dist': 0.05874185064923365}
+
 # best
 /workspace/PXRDgen/capsule/code/xrd2struc/outputs/2026-03-25/Diff_CNN_1.00_unfixed/best_sample1_1.pt
 sample 1: 

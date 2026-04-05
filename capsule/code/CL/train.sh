@@ -1,27 +1,73 @@
 ################################
-'''
-Remember to change the new path in this template before training:
-1. main.py -- PROJECT_ROOT
-2. conf/default.yaml -- workpath
-3. conf/data/default.yaml -- file_path
-'''
+# '''
+# Remember to change the new path in this template before training:
+# 1. main.py -- PROJECT_ROOT
+# 2. conf/default.yaml -- workpath
+# 3. conf/data/default.yaml -- file_path
+# '''
 ################################
 
 work_path='/workspace/PXRDgen/capsule/code/CL'
 cd $work_path
 
-daytime='2026-03-23'
-# name='CL_CNN_t_0_05'
-# python main.py expname=$name model.temperature=0.05 model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_CNN optim.optimizer.weight_decay=0 optim.optimizer.lr=1e-3 optim.lr_scheduler.eta_min=1e-7
-# name='CL_CNN_t_1_00'
+# daytime='2026-03-23'
+# # name='CL_CNN_t_0_05'
+# # python main.py expname=$name model.temperature=0.05 model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_CNN optim.optimizer.weight_decay=0 optim.optimizer.lr=1e-3 optim.lr_scheduler.eta_min=1e-7
+# name='CL_CNN_t_1_00_order0'
 # python main.py expname=$name model.temperature=1.0 model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_CNN optim.optimizer.weight_decay=1e-4 optim.optimizer.lr=1e-3
 
-name='CL_CNN_t_1_00'
-python main.py expname=$name model.temperature=1.0 model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_CNN optim.optimizer.weight_decay=0 optim.optimizer.lr=1e-3 optim.lr_scheduler.eta_min=1e-7
+# name='CL_CNN_t_1_00_order1'
+# python main.py expname=$name model.temperature=1.0 model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_CNN optim.optimizer.weight_decay=1e-4 optim.optimizer.lr=1e-3
 
-# daytime='2024-06-26'
-# name='CL_T_t_1_00'
+# name='CL_CNN_t_1_00_order2'
+# python main.py expname=$name model.temperature=1.0 model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_CNN optim.optimizer.weight_decay=1e-4 optim.optimizer.lr=1e-3
+
+# name='CL_CNN_t_1_00_order3'
+# python main.py expname=$name model.temperature=1.0 model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_CNN optim.optimizer.weight_decay=1e-4 optim.optimizer.lr=1e-3
+
+
+# # name='CL_CNN_t_1_00'
+# # python main.py expname=$name model.temperature=1.0 model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_CNN optim.optimizer.weight_decay=0 optim.optimizer.lr=1e-3 optim.lr_scheduler.eta_min=1e-7
+
+# # daytime='2024-06-26'
+# name='CL_T_t_1_00_order0'
 # python main.py expname=$name model.temperature=1.0 model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_T optim.optimizer.weight_decay=0 optim.lr_scheduler.eta_min=1e-8 logging.pl_trainer.precision=bf16-mixed
-# name='CL_T_t_0_05'
-# python main.py expname=$name model.temperature=0.05 model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_T optim.optimizer.weight_decay=0 optim.lr_scheduler.eta_min=1e-8 logging.pl_trainer.precision=bf16-mixed
+# # name='CL_T_t_0_05'
+# # python main.py expname=$name model.temperature=0.05 model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_T optim.optimizer.weight_decay=0 optim.lr_scheduler.eta_min=1e-8 logging.pl_trainer.precision=bf16-mixed
+
+# name='CL_T_t_1_00_order1'
+# python main.py expname=$name model.temperature=1.0 model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_T optim.optimizer.weight_decay=0 optim.lr_scheduler.eta_min=1e-8 logging.pl_trainer.precision=bf16-mixed
+
+# name='CL_T_t_1_00_order2'
+# python main.py expname=$name model.temperature=1.0 model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_T optim.optimizer.weight_decay=0 optim.lr_scheduler.eta_min=1e-8 logging.pl_trainer.precision=bf16-mixed
+
+# name='CL_T_t_1_00_order3'
+# python main.py expname=$name model.temperature=1.0 model.encoder_xrd._target_=app.model.encoder_xrd.xrd_encoder_T optim.optimizer.weight_decay=0 optim.lr_scheduler.eta_min=1e-8 logging.pl_trainer.precision=bf16-mixed
+
+
+
+# 测试
+echo 'CL_CNN_t_1_00'
+python -u /workspace/PXRDgen/capsule/code/CL/scripts/test_all_accuracy.py --model_path /workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_CNN_t_1_00_order0 --label -1 >> z_train1.txt
+
+python -u /workspace/PXRDgen/capsule/code/CL/scripts/test_all_accuracy.py --model_path /workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_CNN_t_1_00_order1 --label -1 >> z_train1.txt
+
+python -u /workspace/PXRDgen/capsule/code/CL/scripts/test_all_accuracy.py --model_path /workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_CNN_t_1_00_order2 --label -1 >> z_train1.txt
+
+python -u /workspace/PXRDgen/capsule/code/CL/scripts/test_all_accuracy.py --model_path /workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_CNN_t_1_00_order3 --label -1 >> z_train1.txt
+
+echo 'CL_T_t_1_00'
+
+python -u /workspace/PXRDgen/capsule/code/CL/scripts/test_all_accuracy.py --model_path /workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_T_t_1_00_order0 --label -1 >> z_train1.txt
+
+python -u /workspace/PXRDgen/capsule/code/CL/scripts/test_all_accuracy.py --model_path /workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_T_t_1_00_order1 --label -1 >> z_train1.txt
+
+python -u /workspace/PXRDgen/capsule/code/CL/scripts/test_all_accuracy.py --model_path /workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_T_t_1_00_order2 --label -1 >> z_train1.txt
+
+python -u /workspace/PXRDgen/capsule/code/CL/scripts/test_all_accuracy.py --model_path /workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_T_t_1_00_order3 --label -1 >> z_train1.txt
+
+
+
+
+
 

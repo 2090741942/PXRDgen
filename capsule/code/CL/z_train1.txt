@@ -1,0 +1,70 @@
+/workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_CNN_t_1_00_order0/last_one.ckpt
+test_all_accuracy
+batch_size: 9046
+top1 is : 1.93%.
+top3 is : 5.72%.
+top5 is : 8.37%.
+top10 is : 14.0%.
+----
+/workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_CNN_t_1_00_order1/last_one.ckpt
+test_all_accuracy
+batch_size: 9046
+top1 is : 1.93%.
+top3 is : 5.72%.
+top5 is : 8.37%.
+top10 is : 14.0%.
+----
+/workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_CNN_t_1_00_order2/last_one.ckpt
+test_all_accuracy
+batch_size: 9046
+top1 is : 1.93%.
+top3 is : 5.72%.
+top5 is : 8.37%.
+top10 is : 14.0%.
+----
+/workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_CNN_t_1_00_order3/last_one.ckpt
+test_all_accuracy
+batch_size: 9046
+top1 is : 1.93%.
+top3 is : 5.72%.
+top5 is : 8.37%.
+top10 is : 14.0%.
+----
+
+
+
+
+
+
+/workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_T_t_1_00_order0/last_one.ckpt
+test_all_accuracy
+batch_size: 9046
+top1 is : 7.28%.
+top3 is : 16.95%.
+top5 is : 23.61%.
+top10 is : 35.47%.
+----
+/workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_T_t_1_00_order1/last_one.ckpt
+test_all_accuracy
+batch_size: 9046
+top1 is : 7.28%.
+top3 is : 16.96%.
+top5 is : 23.61%.
+top10 is : 35.47%.
+----
+/workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_T_t_1_00_order2/last_one.ckpt
+test_all_accuracy
+batch_size: 9046
+top1 is : 7.28%.
+top3 is : 16.95%.
+top5 is : 23.61%.
+top10 is : 35.47%.
+----
+/workspace/PXRDgen/capsule/code/CL/outputs/2026-04-04/CL_T_t_1_00_order3/last_one.ckpt
+test_all_accuracy
+batch_size: 9046
+top1 is : 7.28%.
+top3 is : 16.96%.
+top5 is : 23.61%.
+top10 is : 35.47%.
+----
